@@ -4,70 +4,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Landing Page</title>
 </head>
 <body>
 
   <header>
-
-    <img src="#" alt="Header Logo">
-
-    <div class="header-links">
-      <a href="#">Anchor1</a>
-      <a href="#">Anchor2</a>
-      <a href="#">Anchor3</a>
+    <div class="top-part">
+      <img class="logo" src="./img/mars_icon.png" alt="Header Logo">
+      <div class="header-links">
+        <a href="#">About</a>
+        <a href="#">Video</a>
+        <a href="#">Contacts</a>
+      </div>
     </div>
-
-    <div class="about-website">
-      <h1>My cat Mars</h1>
-      <p>One year ago me and my family decided to help kitten finding new home. He lived on my mom's balcony at office
-        apartments. We called him Mars</p>
-      <button>Meow</button>
+    <div class="bot-part">
+      <div class="about-website">
+        <h1>My cat Mars</h1>
+        <p>This page contains photos and video of my cat name Mars. Some photos may be in bad quality as they were difficult to
+          take. Mars consented to the photo/video shooting. Click the button to meow.
+        </p>
+        <button onclick="top_audio.play();" >Meow (=^･ω･^=)</button>
+        <script>
+          const top_audio = new Audio();
+          top_audio.src = "./sound/top-button-meow.mp3";
+        </script>
+      </div>
+      <img class="placeholder" src="./img/palceholder.jpg" alt="Picture of Mars">
     </div>
-
-    <img src="#" alt="Picture of Mars">
-
   </header>
 
-  <div class="photos">
+  <main>
+    <h2>Photos</h2>
+      <div class="photos">
+      <figure class="photo">
+        <img src="./img/mars-with-toy.jpg" alt="First">
+        <figcaption>His favorite toy</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="./img/mars-chilling.jpg" alt="Second">
+        <figcaption>Chilling with his friend</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="./img/mars-and-sportbag.jpg" alt="Third">
+        <figcaption>Unpacking sportbag</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="./img/mars-thinking.jpg" alt="Fourth">
+        <figcaption>Rest after running</figcaption>
+      </figure>
+    </div>
+  </main>
 
-    <h2>More Mars photos</h2>
+  <section class="about">
+    <h2>Video</h2>
+    <video width="600" height="500" controls>
+      <source src="./video/video_2022-09-21_10-00-07.mp4" type="video/mp4">
+      Your browser doesn't support video tag
+    </video>
+    <div class="quote">
+      <q>Meow means Woof in cat.</q>
+      <p>-George Carlin</p>
+    </divclass>
+  </section>
 
-    <figure>
-      <img src="#" alt="First">
-      <figcaption>Some caption</figcaption>
-    </figure>
-    <figure>
-      <img src="#" alt="Second">
-      <figcaption>Some caption</figcaption>
-    </figure>
-    <figure>
-      <img src="#" alt="Third">
-      <figcaption>Some caption</figcaption>
-    </figure>
-    <figure>
-      <img src="#" alt="Fourth">
-      <figcaption>Some caption</figcaption>
-    </figure>
-
-  </div>
-
-  <div class="quote">
-
-    <q>Some inspirational quote</q>
-    <p>Quote Author</p>
-
-  </div>
-
-  <div class="newsletter">
-
-    <p>Some text here</p>
-    <button>Meow</button>
-
-  </div>
+  <section class="meow-section">
+    <div class="description">
+      <h2>Time to MEOW</h2>
+      <p>Here is the next meow button like in the header section (but with another meow sound). Enjoy ;)</p>
+    </div>
+    <div class="meow-button">
+      <button onclick="bot_audio.play();">Meow (=｀ω´=)</button>
+      <script>
+        const bot_audio = new Audio();
+        bot_audio.src = "./sound/bot-button-meow.mp3";
+      </script>
+    </div>
+  </section>
 
   <footer>
     <p>Copyright © The Odin Project 2021</p>
   </footer>
+  
 </body>
 </html>
